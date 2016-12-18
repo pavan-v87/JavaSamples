@@ -1,0 +1,18 @@
+@startuml
+
+interface Dummy1 {
+  String data
+  void methods()
+}
+
+class Dummy implements Dummy1{
+  String data
+  void methods()
+  Flight flight
+}
+
+class Flight {
+   flightNumber : Integer
+   departureTime : Date
+}
+@enduml
