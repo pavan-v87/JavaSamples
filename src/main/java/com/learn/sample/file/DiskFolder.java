@@ -1,7 +1,5 @@
 package com.learn.sample.file;
 
-import com.sun.istack.internal.Nullable;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +28,6 @@ public class DiskFolder implements Folder {
     }
 
     @Override
-    @Nullable
     public String getFolderName() {
         String name = null;
         if (isValid()) {
@@ -40,7 +37,6 @@ public class DiskFolder implements Folder {
     }
 
     @Override
-    @Nullable
     public String[] getAllFileNames() {
         String[] fileNames = null;
         if (isValid()) {
@@ -54,8 +50,7 @@ public class DiskFolder implements Folder {
     }
 
     @Override
-    @Nullable
-    public String[] getCommonFiles(@Nullable Folder another) { // Intersection of 2 arrays
+    public String[] getCommonFiles(Folder another) { // Intersection of 2 arrays
         String[] common = null;
         if (isValid()) {
             List<String> temp = new ArrayList<>();
